@@ -1,7 +1,5 @@
 # Variant-Calling Whole Genome Sequencing Pipeline
 A rough variant-calling WGS pipeline that uses GATK best practices.
 ## General Information
-A wgs variant-calling pipeline that includes quality control, trimming, sequence alignment, alignment clean-up, variant calling and finally filtering and annotation. 
-The pipeline accepts a sample's fastq files and generates a filtered variants.vcf.tsv table
-This pipeline uses the GATK package best practices ("AddOrReplaceGroups", "ApplyBQSR", "HaplotypeCaller", etc...).
+This pipeline is ran through bash. It accepts a sample's fastq files and returns a tsv file of the filtered variants. It will take the fastq files and run them through quality control, trimming (optional), sequence alignment, alignment clean-up, variant calling and finally filtering and annotating. It uses the GATK best practices.
 ## 
