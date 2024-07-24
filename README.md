@@ -18,13 +18,11 @@ This pipeline is ran through bash. It accepts a sample's fastq files and returns
 ## Usage
 Once all packages are downloaded, all the files needed can be downloaded/produced. The files from the "files needed" section should be produced prior to running the pipeline. 
 
-Creating a symbolic link to the gatk file is needed for the pipeline to function properly as it assumes that it can use the gatk package regardless of what directory the user is in.
-
 ### Steps to using the pipeline:
 1. Download script.
 2. Download packages needed.
 3. Extract gatk.tar.gz files to a directory.
-4. Locate the gatk executable file and either add that to the system's path or create a symbolic link. 
+4. Locate the gatk executable file and either add that to the system's path or create a symbolic link. The pipeline assumes it can use the gatk command from any directory.
 5. Download files that can be downloaded from "Files" section.
 6. Produce the dictionary and index files needed from the "Files" section.
 7. Give the bash script excutable premission.
