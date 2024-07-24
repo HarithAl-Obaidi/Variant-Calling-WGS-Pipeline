@@ -3,6 +3,7 @@ A rough variant-calling WGS pipeline that uses GATK best practices.
 ## General Information
 This pipeline is ran through bash. It accepts a sample's fastq files and returns a .tsv file of the filtered variants. It will take the fastq files and run them through quality control, trimming (optional), sequence alignment, alignment clean-up, variant calling and finally filtering and annotating. 
 ## Packages and Files
+Important note: All packages and files in this section should be downloaded and or produced prior to running the pipeline.
 ### Packages
 * fastqc - version 0.11.9 - quality control package that produces a QC report.
 * trimmomatic - version 0.39 - package that will trim the reads in order to have good quality results. Can be downloaded from trimmomatic github page.
@@ -15,10 +16,7 @@ This pipeline is ran through bash. It accepts a sample's fastq files and returns
 * genome dictionary file (genome.dict): can be produced using samtools command --> samtools dict -o genome.dict path/to/genome/reference/file
 * dbSNP file(s). Multiple dbSNP files can be used, the one used for this pipeline is from https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0. File name is "homo_sapien_assembly38.dbSNP138.vcf"
 * dbSNP dictionary file: Can be produced using gatk command --> gatk IndexFeatureFile -I path/to/dbSNP/file
-## Usage
-Once all packages are downloaded, all the files needed can be downloaded/produced. The files from the "files needed" section should be produced prior to running the pipeline. 
-
-### Steps to using the pipeline:
+ ## Steps to using the pipeline:
 1. Download script.
 2. Download packages needed.
 3. Extract gatk.tar.gz files to a directory.
