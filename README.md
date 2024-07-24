@@ -11,10 +11,10 @@ Important note: All packages and files in this section should be downloaded and 
 * samtools - version 1.13 - package used for various purposes, mainly to convert SAM file to a sorted BAM file.
 * GATK - version 4.5.0.0 - main package of pipeline, used for variant calling steps. Can be downloaded from GATK website.
 ### Files
-* genome reference file. UCSC hg38 reference file from from the iGenomes website is the one used but any reference file will work.
+* genome reference file. Good one to use: UCSC hg38 reference file from from the iGenomes website. However any reference genome file will work.
 * genome.fa.fai file: can be produced using samtools command --> samtools faidx path/to/genome/reference/file
 * genome dictionary file (genome.dict): can be produced using samtools command --> samtools dict -o genome.dict path/to/genome/reference/file
-* dbSNP file(s). Multiple dbSNP files can be used, the one used for this pipeline is from https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0. File name is "homo_sapien_assembly38.dbSNP138.vcf"
+* dbSNP file(s). Multiple dbSNP files can be used. Good file to use: https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0. File name is "homo_sapien_assembly38.dbSNP138.vcf"
 * dbSNP dictionary file: Can be produced using gatk command --> gatk IndexFeatureFile -I path/to/dbSNP/file
  ## Steps to using the pipeline:
 1. Download script.
