@@ -1,7 +1,5 @@
 #!/bin/bash 
 
-# Sample -NA12878
-
 mkdir VariantCalling_Pipeline #Directory where pipeline will be taking place
 cd VariantCalling_Pipeline
 
