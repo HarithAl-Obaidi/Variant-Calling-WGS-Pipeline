@@ -3,19 +3,19 @@ A rough variant-calling WGS pipeline that uses GATK best practices.
 ## General Information
 This pipeline is ran through bash. It accepts a sample's fastq files and returns a .tsv file of the filtered variants. It will take the fastq files and run them through quality control, trimming (optional), sequence alignment, alignment clean-up, variant calling and finally filtering and annotating. 
 ## Packages and Files
-Important note: All packages and files in this section should be downloaded and or produced prior to running the pipeline.
+**Important note: All packages and files in this section should be downloaded and or produced prior to running the pipeline.**
 ### Packages
-* fastqc - version 0.11.9 - quality control package that produces a QC report.
-* trimmomatic - version 0.39 - package that will trim the reads in order to have good quality results. Can be downloaded from trimmomatic github page.
-* bwa - version 0.7.17-r1188 - package used for alignment.
-* samtools - version 1.13 - package used for various purposes, mainly to convert SAM file to a sorted BAM file.
-* GATK - version 4.5.0.0 - main package of pipeline, used for variant calling steps. Can be downloaded from GATK website.
+* fastqc - version 0.11.9 - quality control package that produces a QC report. ***sudo apt install fastqc***
+* trimmomatic - version 0.39 - package that will trim the reads in order to have good quality results. Can be downloaded from official website: [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic). ***download binary file.*** ***_Trimmomatic is a Java application, make sure system has Java installed: Can be done using sudo apt install default-jre***
+* bwa - version 0.7.17-r1188 - package used for alignment. ***sudo apt install bwa***
+* samtools - version 1.13 - package used for various purposes, mainly to convert SAM file to a sorted BAM file. ***sudo apt install samtools***
+* GATK - version 4.5.0.0 - main package of pipeline, used for variant calling steps. Can be downloaded from GATK website. [gatk 4.5.0.0](https://github.com/broadinstitute/gatk/releases). _scroll to version 4.5.0.0 and download zip file_
 ### Files
-* genome reference file. Good one to use: UCSC hg38 reference file from from the iGenomes website. However any reference genome file will work.
-* genome.fa.fai file: can be produced using samtools command --> samtools faidx path/to/genome/reference/file
-* genome dictionary file (genome.dict): can be produced using samtools command --> samtools dict -o genome.dict path/to/genome/reference/file
-* dbSNP file(s). Multiple dbSNP files can be used. Good file to use: https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0. File name is "homo_sapien_assembly38.dbSNP138.vcf"
-* dbSNP dictionary file: Can be produced using gatk command --> gatk IndexFeatureFile -I path/to/dbSNP/file
+* genome reference file. Good one to use: UCSC hg38 reference file from from the iGenomes website [hg38 reference](https://support.illumina.com/sequencing/sequencing_software/igenome.html) ***scroll down to "homo sapiens"***. However any reference genome file will work.
+* genome.fa.fai file: can be produced using samtools command --> ***samtools faidx path/to/genome/reference/file***
+* genome dictionary file (genome.dict): can be produced using samtools command --> ***samtools dict -o genome.dict path/to/genome/reference/file***
+* dbSNP file(s). Multiple dbSNP files can be used. Good file to use: [dbSNP hg38](https://console.cloud.google.com/storage/browser/genomics-public-data/resources/broad/hg38/v0). File name is "homo_sapien_assembly38.dbSNP138.vcf"
+* dbSNP dictionary file: Can be produced using gatk command --> ***gatk IndexFeatureFile -I path/to/dbSNP/file***
  ## Steps to using the pipeline:
 1. Download script.
 2. Download packages needed.
