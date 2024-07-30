@@ -3,7 +3,7 @@ A rough variant-calling WGS pipeline that uses GATK best practices.
 ## General Information
 This pipeline is ran through bash. It accepts a sample's fastq files and returns a .tsv file of the filtered variants. It will take the fastq files and run them through quality control, trimming (optional), sequence alignment, alignment clean-up, variant calling and finally filtering and annotating. 
 ## Packages and Files
-**Important note: All packages and files in this section should be downloaded and or produced prior to running the pipeline.**
+**Important note: All packages and files in this section should be installed and or produced prior to running the pipeline.**
 ### Packages
 * fastqc - version 0.11.9 - quality control package that produces a QC report. ***sudo apt install fastqc***
 * trimmomatic - version 0.39 - package that will trim the reads in order to have good quality results. Can be downloaded from official website: [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic). ***download binary file for version 0.39.*** ***Trimmomatic is a Java application, make sure system has Java installed. Can be done using: sudo apt install default-jre***
