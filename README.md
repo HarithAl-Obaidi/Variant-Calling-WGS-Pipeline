@@ -24,12 +24,12 @@ This pipeline is ran through bash. It accepts a sample's fastq files and returns
 5. Download genome reference file and use _samtools_ package to create genome.fa.fai and genome.dict files as per instructions in **Files** section of README.
 6. Give the GATK_VariantCalling_Pipeline script excutable premission. ***chmod +x GATK_VariantCalling_Pipeline.sh***
 7. Change the directory to wherever the pipeline's script is, then run: ***./GATK_VariantCalling_Pipeline.sh***
-   The script takes in 6 total inputs:
+   The script takes in 6 total inputs in this order:
     * path to read 1 file
     * path to read 2 file
     * path to trimmomatic executable file
     * path to adapter file from trimmomatic package
     * path to genome reference file
     * path to dbSNP file
-   Sample version of what running the script might look like: 
+ 8. Sample version of what running the script might look like: 
    ***./GATK_VariantCalling_Pipeline.sh ~/genomics/read_1.fastq ~/genomics/read_2.fastq ~/genomics/trimmomatic/Trimmomatic-0.39/trimmomatic-0.39.jar ~/genomics/trimmomatic/Trimmomatic-0.39/adapters/TruSeq3-PE.fa ~/genomics/Homo_sapiens/UCSC/hg38/Sequence/BWAIndex/version0.6.0/genome.fa ~/genomics/resources_broad_hg38_v0_Homo_sapiens_assembly38.dbsnp138.vcf***
